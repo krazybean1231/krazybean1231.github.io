@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evan Yang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header" id="header">
+    <div class="header-top">
+      <a href="#default" class="logo">Evan Yang</a>
+      <button class="sandwich" id="sandwich" onclick="">&#9776;</button>
+        <div class="dropdown" id="dropdownMenu">
+     
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Social</a>
+        </div>
+    </div>
+      <div class="dropdown2" id="dropdownMenu2">
+
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Social</a>
+      </div>
+    
+  </div>
+
+  <div class="blog-container">
+    <div class="timeline-box" id="sticky-box">
+      <div class="timeline-scroll">
+        <div class="timeline-progress"></div>
+        <ul class="timeline-dates">
+          <li data-id="post1"><a data-target="post1">2023-12-01</a></li>
+          <li data-id="post2"><a data-target="post2">2024-01-10</a></li>
+          <li data-id="post3"><a data-target="post3">2024-05-15</a></li>
+          <li data-id="post4"><a data-target="post4">2024-06-20</a></li>
+          <li data-id="post5"><a data-target="post5">2025-01-01</a></li>
+          <li data-id="post5"><a data-target="post6">2025-01-01</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="posts">
+      <article class="post" id="post1"><div class="container">
+        <a href="post1.html" class="clickable-area">
+        <div class="meta">
+          <p class="date">Date here</p>
+         <!-- <p class="read-time">Sophmore</p>-->
+        </div>
+        <div class="content">
+          <h1>Building an RC Plane from Scratch</h1>
+         <!-- <div class="tags">
+            
+            <span class="tag">FUNCTION-CALLING</span>
+            <span class="tag">AGENTS</span>
+            <span class="tag">PYTHON</span>
+            </div>
+          -->
+            <p class="description">
+              decription here
+            </p>
+         </div>
+          <div class="image">
+            <img src="rcplane.png" alt="Diagram" />
+          </div>
+        </div>
+        </a>
+      </article>
+      <article class="post" id="post2">Post 2 content...</article>
+      <article class="post" id="post3">Post 3 content...</article>
+      <article class="post" id="post4">Post 4 content...</article>
+      <article class="post" id="post5">Post 5 content...</article>
+      <article class="post" id="post6">Post 5 content...</article>
+    </div>
+  </div>
+<div style="height:1000px;"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
