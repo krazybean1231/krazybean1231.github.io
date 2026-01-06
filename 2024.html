@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evan Yang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="what.css" integrity="sha384-..." crossorigin="anonymous" />
+</head>
+<body>
+
+  <div class="header" id="header">
+    <div class="header-top">
+      <a href="/" class="logo">Evan Yang</a>
+      <button class="sandwich" id="sandwich" onclick="">&#9776;</button>
+        <div class="dropdown" id="dropdownMenu">
+
+          <a href="/">Home</a>
+          <div class="dropdown-projects">
+            <a id="latest">Blog</a>
+            <div class="dropdown-content">
+              
+            </div>
+            <script>
+            fetch("/header.html")
+              .then(res => res.text())
+              .then(html => {
+                document.getElementById("dropdown-content").innerHTML = html;
+              });
+            </script>
+          </div>
+          <a href="/contact">Social</a>
+        </div>
+    </div>
+      <div class="dropdown2" id="dropdownMenu2">
+
+        <a href="/">Home</a>
+        <a id="latest" onclick="rn();">Blog</a>
+        <a href="/contact">Social</a>
+      </div>
+
+  </div>
+
+  <style>
+    .header {
+      transition: transform 0.25s ease-in-out;
+      z-index: 100; /* Ensure it stays on top */
+    }
+
+    .header--hidden {
+      transform: translateY(-100%);
+    }
+    
+  </style>
+
+
+  <button class="next-page-button" onclick="window.location.href='2025';" style="position: absolute; top: 145px; left: 10%; transform: translateY(-50%); background-color: #4a5f82; color: #9FC1DB; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px; border: none; cursor: pointer;" onmouseover="this.style.backgroundColor='#35455f'; this.style.color='#ddd';" onmouseout="this.style.backgroundColor='#4a5f82'; this.style.color='#9FC1DB'">
+    <span style="font-size: 1.2em;">&larr;</span> 2025
+  </button>
+  <div class="blog-container">
+    <div class="timeline-box" id="sticky-box" style="margin-right: min(10%, 200px);top:200px;">
+      <script>
+        window.onload = function() {
+          var box = document.getElementById('sticky-box');
+          if (box) {
+            var rect = box.getBoundingClientRect();
+            if (rect.top < window.innerHeight / 2) {
+              box.style.position = 'fixed';
+              box.style.top = '50%';
+              box.style.transform = 'translateY(-50%)';
+            }
+          }
+        };
+      </script>
+      <div class="timeline-scroll">
+        <div class="timeline-progress"></div>
+        <ul class="timeline-dates">
+          <li data-id="post1"><a data-target="post1">2024-8-21</a></li>
+          <li data-id="post2"><a data-target="post2">2024-10-10</a></li>
+          <li data-id="post3"><a data-target="post3">Date 3</a></li>
+          <li data-id="post4"><a data-target="post4">Date 4</a></li>
+          <li data-id="post5"><a data-target="post5">Date 5</a></li>
+          <li data-id="post5"><a data-target="post6">Date 6</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="posts">
+      <article class="post" id="post1"><div class="container">
+        <a href="rcplane">
+        <div class="quarto-post image-right" data-index="0" data-categories="ZnVuY3Rpb24tY2FsbGluZyUyQ2FnZW50cyUyQ3B5dGhvbg==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1752390993958" data-listing-date-modified-sort="1748736000000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1434">
+        <div class="thumbnail"><a href="rcplane" class="no-external">
+
+        <img loading="lazy" src="planhe.jpg" class="thumbnail-image">
+
+        </a></div>
+        <div class="body">
+        <h3 class="no-anchor listing-title"><a href="rcplane" class="no-external post-title" data-original-href="/rcplane">Building RC Airplane from Scratch</a></h3>
+        <div class="listing-date" style="padding-top: 9px; padding-bottom: 10px;"><a href="rcplane">Aug 21, 2024</a></div>
+
+        <div class="delink listing-description"><a href="rcplane" data-original-href="index">
+        <p>A functional flying RC aircraft made completely from foamboard, cardboard, and other basic materials.</p>
+        </a></div>
+        </div>
+        
+        </div></a></div>
+      </article>
+      <article class="post" id="post2">
+        <div class="container">
+          <a href="drone">
+          <div class="quarto-post image-right" data-index="0" data-categories="ZnVuY3Rpb24tY2FsbGluZyUyQ2FnZW50cyUyQ3B5dGhvbg==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1752390993958" data-listing-date-modified-sort="1748736000000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1434">
+          <div class="thumbnail"><a href="drone" class="no-external">
+
+          <img loading="lazy" src="drone.png" class="thumbnail-image">
+
+          </a></div>
+          <div class="body">
+          <h3 class="no-anchor listing-title"><a href="drone" class="no-external post-title" data-original-href="/drone">DIY FPV Drone</a></h3>
+          <div class="listing-date" style="padding-top: 9px; padding-bottom: 10px;"><a href="drone">Oct 10, 2024</a></div>
+
+          <div class="delink listing-description"><a href="drone" data-original-href="index">
+          <p>A FPV (first person view) drone assembled from seperately sourced parts.</p>
+          </a></div>
+          </div>
+
+          </div></a></div>
+      </article>
+      <article class="post" id="post3">Post 3 content...</article>
+      <article class="post" id="post4">Post 4 content...</article>
+      <article class="post" id="post5">Post 5 content...</article>
+      <article class="post" id="post6">Post 5 content...</article>
+    </div>
+  </div>
+<div style="height:600px;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+  
