@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evan Yang</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />  
   <link rel="stylesheet" href="what.css" integrity="sha384-..." crossorigin="anonymous" />
 </head>
 <body>
-
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <div class="header" id="header">
     <div class="header-top">
       <a href="/" class="logo">Evan Yang</a>
@@ -41,21 +41,21 @@
 
   </div>
 
-  
 
 
-  
+
+
   <div style="width: 100%; min-height: 240px; background-color: #4a5f82;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: left;">
     <div style="max-width:800px; min-height: 200px; ">
-    <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">DIY FPV Drone</h1>
-  
+    <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">PVC Flute</h1>
+
     <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">A FPV (first person view) drone assembled from seperately sourced parts.</p>
       </div>
   </div>
   </div>
 
-  
+
   <div style="width: 100%; min-height: 240px; margin-top: 20px;">
     <div style="max-width: 1000px; margin: 0 auto; ">
     <div class = "boxx" style="max-width:800px; min-height: 200px; padding-left: 30px;   ">
@@ -76,7 +76,7 @@
       </div>
 
 
-        
+
 
         <div class="main-content">
           <div id="intro">
@@ -90,7 +90,7 @@
 
 
 
-          
+
           <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Materials</h1>
             <ul>
               <li><p>Video Transmitter (RUSH Solo Tank 5.8G)</p></li>
@@ -111,7 +111,7 @@
 
 
 
-          
+
           <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Building It</h1>
           <p>Building this was not very straightforward. The video by Hoarder Sam did not show the entire built process and a lot of the way the parts were put together I had to figure out myself. This was also my first time soldering, so I had to learn how to solder as well. 
 </p>
@@ -123,7 +123,7 @@
 
 
 
-          
+
           <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Configuration</h1>
           <p>After completing building the drone and pairing the controller with the ELRS receiver, I had to use betaflight to configure some settings. Connecting the flightstack to the controller proved to be a challenge because it wouldn’t just directly connect. I had to configure a lot of settings to make sure they matched the hardware of the F4V3 flight stack as well as update the firmware. Here is what the motor configuratation looked like:</p>
             <img src="betaflight.png" style=" border: 1px solid #ddd; border-radius: 4px;">
@@ -134,16 +134,16 @@
 
 
 
-          
+
            <div id = "outcome-2"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Testing and Results</h1>
                     <p>Testing the drone went pretty well. The drone was very powerful and I had to make sure I didn’t crash it into anything. The done did fly, but since I don’t have FPV goggles yet, I wasn’t confident enough to control the drone as seen in the FPV videos. 
           </p>
-             <video style="margin-top: 40px; " controls><source src="droneflight.mp4"></video>
+             <model-viewer alt="flute" src="flute.gltf"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
              <p class="subtitle">Wanted to be safe since this was indoors, but the drone works!</p>
                     <p>2025 Update: My friend wanted to build a drone as well, so I referred this model to him and helped him build a near identical one. This drone build was pretty successful.
           </p></div>
-                    
-          <a style="margin-top: 40px;" href = "flute">Next Article (PVC Flute) ></a>
+
+          <a style="margin-top: 40px;" href = "drone">Next Article (FPV Drone) ></a>
         </div>
       </div>
   </div>
@@ -156,7 +156,7 @@
 
 
 
-      
+
       <div id="toc" style="position: absolute; top: 260px; font-size: 14px;">
         <p style="font-weight: bold; margin-bottom: 10px;">On this page</p>
         <li data-id = "intro"><a data-target = "intro" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Intro</a></li>
@@ -172,9 +172,10 @@
 
 
 
-    
+
 
 <div style="height:500px;"></div>
+  
 <script src="blog.js"></script>
    <style>
     .header {
@@ -217,7 +218,7 @@
          padding-right: 30px;
        }
      }
-     
+
 
   </style>
 </body>

@@ -425,6 +425,14 @@ html {
    margin-top: 10px;
    margin-bottom: 10px;
  }
+.main-content model-viewer {
+  max-width: 80%;
+   height: auto;
+   display: block;
+   margin: 0 auto; /* optional, to center */
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
 /* Responsive */
 @media screen and (min-width: 1000px){
 

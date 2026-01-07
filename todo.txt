@@ -1,4 +1,4 @@
-add link at bottom of main-content on blog pages
+qadd link at bottom of main-content on blog pages
 add links at bottom of page on project pages that link to different dates
 improve mobile mode (screen is less than some amount of px)
 
