@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evan Yang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="what.css" integrity="sha384-..." crossorigin="anonymous" />
+</head>
+<body>
+
+  <div class="header" id="header">
+    <div class="header-top">
+      <a href="/" class="logo">Evan Yang</a>
+      <button class="sandwich" id="sandwich" onclick="">&#9776;</button>
+        <div class="dropdown" id="dropdownMenu">
+
+          <a href="/">Home</a>
+          <div class="dropdown-projects">
+            <a id="latest">Blog</a>
+            <div class="dropdown-content">
+
+            </div>
+            <script>
+            fetch("/header.html")
+              .then(res => res.text())
+              .then(html => {
+                document.getElementById("dropdown-content").innerHTML = html;
+              });
+            </script>
+          </div>
+          <a href="/contact">Social</a>
+        </div>
+    </div>
+      <div class="dropdown2" id="dropdownMenu2">
+
+        <a href="/">Home</a>
+        <a id="latest" onclick="rn();">Blog</a>
+        <a href="/contact">Social</a>
+      </div>
+
+  </div>
+
+  
+
+
+  
+  <div style="width: 100%; min-height: 240px; background-color: #4a5f82;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: left;">
+    <div style="max-width:800px; min-height: 200px; ">
+    <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">Building RC Airplane from Scratch</h1>
+  
+    <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">A functional flying RC aircraft made completely from foamboard, cardboard, and other basic materials.</p>
+      </div>
+  </div>
+  </div>
+
+  
+  <div style="width: 100%; min-height: 240px; margin-top: 20px;">
+    <div style="max-width: 1000px; margin: 0 auto; ">
+    <div class = "boxx" style="max-width:800px; min-height: 200px; padding-left: 30px;   ">
+      <div style="min-height: 200px; ">
+       <div style="display: flex; width: 100%;">
+        <div style="min-width: 50px;">
+          <p style="color: #545454; font-size: 13px; margin-bottom: 0px;">Author</p>
+          <p style="color: black; font-size: 15px;">Evan Yang</p>
+        </div>
+        <div style="padding-left: min(10vw, 130px);min-width: 50px;">
+          <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date</p>
+          <p style="color: black; font-size: 15px;">Aug 21, 2024</p>
+        </div>
+         <div style="padding-left: min(10vw, 130px);min-width: 50px;">
+           <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date Published</p>
+           <p style="color: black; font-size: 15px;">Sept 26, 2024</p>
+         </div>
+      </div>
+        
+
+        <div class="main-content">
+          <div id="intro">
+        <p style="margin-top: 30px;">
+           I came across a YouTube video by the creator Kendin Yap, where he built a simple RC plane using only foamboard, metal rods, and other accessible materials and electronics. His resourceful and DIY approach immediately inspired me to attempt building one of my own.</p> <p> You can watch the video here or below: <a href="https://www.youtube.com/watch?v=BKnxkAgBggM" style="margin-bottom: 20px;">https://www.youtube.com/watch?v=BKnxkAgBggM</a>.
+        </p>
+          <iframe width="500" height="270"
+          src="https://www.youtube.com/embed/BKnxkAgBggM">
+          </iframe> </div>
+          <div id = "building-plane"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Building the Plane</h1>
+          <p>However, as I began sourcing materials, I encountered some obstacles. Several of the components linked in his video were out of stock, forcing me to find alternatives. For instance, the foamboard I purchased was slightly smaller than the one used in the original design, which meant I had to scale the entire plane down proportionally.</p>
+          <p>Kendin Yap used lightweight balsa wood to mount the motor at the rear of the plane, but I didn’t have any on hand. I substituted it with a heavier type of wood, which unfortunately added unnecessary weight. </p><p>After assembling the plane, I quickly ran into structural issues. The metal rod that supported the frame began to buckle under the plane’s weight, and the airframe felt flimsy—likely due to the different foamboard material. In an effort to reinforce the structure, I added metal axles, but this only worsened the weight issue.</p>
+          <p>*I don't have any pictures of the plane that I could find.</p> </div>
+          <div id = "electronics"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Electronics</h1>
+          <p>Despite the setbacks, I was able to build the custom electronics featured in Kendin Yap’s design. He provided <b>Gerber files</b> (used for PCB manufacturing), which I sent to <b>JLCPCB</b>. Once the boards arrived, I soldered on the necessary components, including the microcontroller and antenna. The custom 6-channel transmitter and receiver worked flawlessly. During a field test with my brother, we confirmed it had a range of at least a quarter mile.</p>
+            <img src="pcb.jpg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle">These were the PCBs I got from JLCPCB. The right one if the reciever, the left one is the transmitter. The assembled versions can been seen in the plane image below.</p> 
+            <video style="margin-top: 40px;" controls><source src="rcworking.mp4"></video>
+            <p class="subtitle">This is a video of the transmitter and reciever working wirelessly to control a servo motor.</p>
+          
+          </div>
+          <div id = "outcome-1"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Outcome</h1>
+          <p>The plane used three servo motors—two for the left and right ailerons and one for the elevator located on the rear stabilizer. After finally finishing the build, I tested the plane by hand-launching it from my driveway. Sadly, the plane immediately dropped and crashed into the concrete. The cause was clear: it was simply too heavy.</p>
+          <p>I didn’t let this failure discourage me. I salvaged the electronics and decided to start over, this time using a different design based on another of Kendin Yap’s older videos:  <a href="https://www.youtube.com/watch?v=eHdxx4qpVko">https://www.youtube.com/watch?v=eHdxx4qpVko</a>. </p>
+          <iframe width="500" height="270"
+            src="https://www.youtube.com/embed/eHdxx4qpVko">
+            </iframe>
+          <p>This second design required only two servo motors—one for the rear fin (rudder) and one for the elevator. I also made several modifications to accommodate the materials I had on hand.</p>
+          <p>The new version was significantly lighter, structurally sound, and more aerodynamic than the first. I often woke up early just to make progress on the build—I was that excited. Once completed, I attempted a takeoff from the ground, only to encounter a new problem: the plane would veer sharply to the left during acceleration, preventing a straight lift-off.</p>
+            <img src="planeside.jpg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle">Side view of the plane. The sponsors were sensored for privacy.</p>
+          <p>After doing some research and asking for advice, I learned that this could be caused by P-factor (a phenomenon affecting propeller-driven aircraft), or potentially misaligned wheels. Despite my efforts, I couldn’t fully resolve the issue.</p>
+          <img src="planhe.jpg" style=" border: 1px solid #ddd; border-radius: 4px;">
+          <p class="subtitle">This was the plane I built from the 2nd video. The transmitter and reciever are shown as well.</p> </div>
+          <div id = "outcome-2"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Outcome #2</h1>
+          <p>Eventually, I decided to go for a takeoff anyway. The plane began to accelerate, lifted just an inch off the ground, and then—<b>BAM</b>—slammed into the curb. The damage was extensive: a broken propeller, a crushed nose, and a crumpled fuselage.</p>
+          <p>While the project remains unfinished, the experience was far from a failure. I learned a great deal—how to work with <b>Arduino microcontrollers</b>, how <b>RC plane mechanics</b> function, and how to <b>troubleshoot and adapt</b> when things don’t go according to plan.</p>
+          <p>This project was only possible thanks to Kendin Yap’s videos, which served as both a guide and an inspiration. I’m excited to continue learning, iterating, and eventually achieving successful flight.</p></div>
+          <a style="margin-top: 40px;" href = "drone">Next Article (FPV Drone) ></a>
+        </div>
+      </div>
+  </div>
+      <div id="toc" style="position: absolute; top: 260px; font-size: 14px;">
+        <p style="font-weight: bold; margin-bottom: 10px;">On this page</p>
+        <li data-id = "intro"><a data-target = "intro" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Intro</a></li>
+        <li data-id = "building-plane"><a data-target = "building-plane" >Building the Plane</a></li>
+        <li data-id = "electronics"><a data-target = "electronics" >Electronics</a></li>
+        <li data-id = "outcome-1"><a data-target = "outcome-1" >Outcome</a></li>
+        <li data-id = "outcome-2"><a data-target = "outcome-2" >Outcome #2</a></li>
+      </div>
+
+  </div>
+    </div>
+
+
+
+
+    
+
+<div style="height:500px;"></div>
+<script src="blog.js"></script>
+   <style>
+    .header {
+      transition: transform 0.25s ease-in-out;
+      z-index: 100; /* Ensure it stays on top */
+    }
+
+    .header--hidden {
+      transform: translateY(-100%);
+    }
+     .main-content p{
+       margin-bottom: 10px;
+     }
+     .main-content a:hover{
+       color: #4a5f82;
+     }
+     #toc a {
+       display: block;
+       margin: 6px 0;
+       text-decoration: none;
+       color: #333;
+       border-left: 2px solid transparent;
+       padding-left: 6px;
+       transition: 0.2s;
+     }
+
+     #toc a.active {
+       font-weight: bold;
+       color: #4a5f82;
+       border-left: 2px solid #4a5f82;
+     }
+     .boxx{
+       padding-right: 200px;
+     }
+     @media (max-width: 830px) {
+       #toc {
+         display: none !important;
+       }
+       .boxx{
+         padding-right: 30px;
+       }
+     }
+     
+
+  </style>
+</body>
+</html>
