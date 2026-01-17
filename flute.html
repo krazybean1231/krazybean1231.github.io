@@ -50,7 +50,7 @@
     <div style="max-width:800px; min-height: 200px; ">
     <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">PVC Flute</h1>
 
-    <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">A FPV (first person view) drone assembled from seperately sourced parts.</p>
+    <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">Using useless materials to make a useful flute.</p>
       </div>
   </div>
   </div>
@@ -67,11 +67,11 @@
         </div>
         <div style="padding-left: 130px;">
           <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date</p>
-          <p style="color: black; font-size: 15px;">Oct 10, 2024</p>
+          <p style="color: black; font-size: 15px;">May 2, 2025</p>
         </div>
          <div style="padding-left: 130px;">
            <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date Published</p>
-           <p style="color: black; font-size: 15px;">Nov 11, 2024</p>
+           <p style="color: black; font-size: 15px;">May 17, 2025</p>
          </div>
       </div>
 
@@ -81,42 +81,34 @@
         <div class="main-content">
           <div id="intro">
         <p style="margin-top: 30px;">
-        Over the summer of 2024, I got obsessed with FPV drone footage, dreaming of being able to pilot one of these one day. But with any drone pilot comes a drone. Upon researching the options I had for FPV, the results came back strikingly expensive. </p> <p> Watching more video led me down a rabbit hole of DIY FPV and extensive watch hours mentally prepared me for the large task of creating a fully functional drone. The video on a 7 inch FPV inspired me to source my parts due to its cheaper price.
- <a href="https://youtu.be/0jOUTYBneVo" style="margin-bottom: 20px;">https://youtu.be/0jOUTYBneVo</a>.
+        When I was younger, I learned how to play the flute and I saw this project where kids made their own music instrument from the trash in their local landfill. This sustainable and creative method of engineering inspired me to make my own flute due to its simplicity compared to other instruments that I don’t know how to play. </p> <p> A transverse flute can be just a pipe, with one end blocked. I decided to use some PVC pipes I had left over from previous years of VEX fields, which is now obsolete since there is a new game every year. Upon doing some research, I came across a youtuber called Nicolas Bras. This guy is very notable from the sheer amount of expertise he has in making PVC flute. This is the video I used which to guide me to make my own flute: 
+ <a href="https://youtu.be/Obpa9bzpzvQ" style="margin-bottom: 20px;">https://youtu.be/Obpa9bzpzvQ</a>.
         </p>
           <iframe width="500" height="270"
-          src="https://www.youtube.com/embed/0jOUTYBneVo">
+          src="https://www.youtube.com/embed/Obpa9bzpzvQ">
           </iframe> </div>
 
 
 
 
-          <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Materials</h1>
-            <ul>
-              <li><p>Video Transmitter (RUSH Solo Tank 5.8G)</p></li>
-              <li><p>4 BLDC Drone Motors (1300kv 2S-6S)</p></li>
-              <li><p>M3 Screws</p></li>
-              <li><p>3s Lipo Battery (11.1 V)</p></li>
-              <li><p>4 7X4X3 propellors</p></li>
-              <li><p>5.8G Antenna (Rush Cherry SMA-LHCP-160mm)</p></li>
-              <li><p>ELRS receiver</p></li>
-              <li><p>Camera (Runcam Phoenix 2 SE V2)</p></li>
-              <li><p>Mark 4 7 inch drone frame</p></li>
-              <li><p>F4 V3S Flight controller</p></li>
-              <li><p>45A ESC</p></li>
-              <li><p>Soldering Materials</p></li>
-            </ul>
-            <p>I sourced all of these parts on AliExpress, totaling around $200.</p>
-          </div>
-
-
-
-
-          <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Building It</h1>
-          <p>Building this was not very straightforward. The video by Hoarder Sam did not show the entire built process and a lot of the way the parts were put together I had to figure out myself. This was also my first time soldering, so I had to learn how to solder as well. 
+          <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Calculating Holes</h1>
+            
+            <p>The physics of a flute involves calculating the distance of the finger holes from the embouchure can be calculated using the formula for an open tube because the embouchure counts as the other hole where air can escape. Here are my calculated values:
 </p>
-            <img src="dronesolder.png" style=" border: 1px solid #ddd; border-radius: 4px;">
-            <p class="subtitle">These were 6 pads on the ESC used to control the motors where I soldered them myself. Not the best soldering job, but it there's not shorting!</p> 
+            <p>Here are my calculated values:</p>
+            <img src="fluteholes.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle">These were the hole lengths from the end of the flute I calculated myself using the formula. These distance didn't make the rigth pitch, so I had to redo it.</p>
+          </div>
+
+
+
+
+          <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">New Holes</h1>
+            <p>These values turned out to be inaccurate, and caused the flute to be off pitch. Since there isn’t a very accurate way for me to calculate the values of these holes to create the right pitch, I used Nicolas Bras’s blueprint: <a href="https://www.patreon.com/posts/46918629" style="margin-bottom: 20px;">https://www.patreon.com/posts/46918629</a>
+            </p>
+            <img src="realblueprint.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle">Nicolas Bras's blueprint found on his patreon, found on the link above.</p> 
+            <p>This worked much better and I was able to recreate the flute.</p>
           </div>
 
 
@@ -124,10 +116,11 @@
 
 
 
-          <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Configuration</h1>
-          <p>After completing building the drone and pairing the controller with the ELRS receiver, I had to use betaflight to configure some settings. Connecting the flightstack to the controller proved to be a challenge because it wouldn’t just directly connect. I had to configure a lot of settings to make sure they matched the hardware of the F4V3 flight stack as well as update the firmware. Here is what the motor configuratation looked like:</p>
-            <img src="betaflight.png" style=" border: 1px solid #ddd; border-radius: 4px;">
-            <p class="subtitle">(Source: Betaflight) Interface where I configured the directions of the motors to make sure the drone is able to fly properly and properllor direction is also correct.</p>
+          <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Results</h1>
+          <p>The building process involved hacksawing a PVC to the right length and marking the distances on flute and drilling them out with the corresponding size drill bit. The mouthpiece was made using half of a segment of PVC (cut right down the long way) and I used a heatgun to make it conform to a larger radius. At the end of the flute, I could not find a right size endplug and ended up fishing out an old car wheel and stripping off the rubber tire, using the plastic part and hammering it into the end. At the end, I deburred the finger holes and tested out the flute! This is how it Turned out:
+</p>
+            <video style="margin-top: 40px; " controls><source src="fluteplay.mp4"></video>
+             <p class="subtitle">Playing something simple.</p>
           </div>
 
 
@@ -135,14 +128,9 @@
 
 
 
-           <div id = "outcome-2"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Testing and Results</h1>
-                    <p>Testing the drone went pretty well. The drone was very powerful and I had to make sure I didn’t crash it into anything. The done did fly, but since I don’t have FPV goggles yet, I wasn’t confident enough to control the drone as seen in the FPV videos. 
-          </p>
-             
-                    <p>2025 Update: My friend wanted to build a drone as well, so I referred this model to him and helped him build a near identical one. This drone build was pretty successful.
-          </p></div>
+           
 
-          <a style="margin-top: 40px;" href = "drone">Next Article (FPV Drone) ></a>
+          <a style="margin-top: 40px;" href = "VEX">Next Article (VEX) ></a>
         </div>
       </div>
   </div>
@@ -160,9 +148,8 @@
         <p style="font-weight: bold; margin-bottom: 10px;">On this page</p>
         <li data-id = "intro"><a data-target = "intro" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Intro</a></li>
         <li data-id = "materials"><a data-target = "materials" >Materials</a></li>
-        <li data-id = "building"><a data-target = "building" >Building It</a></li>
-        <li data-id = "postbuild"><a data-target = "postbuild" >Configuration</a></li>
-        <li data-id = "outcome-2"><a data-target = "outcome-2" >Testing and Results</a></li>
+        <li data-id = "building"><a data-target = "building" >New Holes</a></li>
+        <li data-id = "postbuild"><a data-target = "postbuild" >Results</a></li>
       </div>
 
   </div>
