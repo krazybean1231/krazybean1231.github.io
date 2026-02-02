@@ -48,9 +48,9 @@
   <div style="width: 100%; min-height: 240px; background-color: #4a5f82;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: left;">
     <div style="max-width:800px; min-height: 200px; ">
-    <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">DIY FPV Drone</h1>
+    <h1 style="color:#bbd9f0; font-size: 36px; padding-top: 100px; padding-left: 30px;padding-right: 30px;">6-DOF Robotic Arm</h1>
 
-    <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">A FPV (first person view) drone assembled from seperately sourced parts.</p>
+    <p style="color: #9fc1db; font-size: 17px; margin-top: 10px; padding-left: 30px; padding-right: 30px;">Designed a 6 axis robotic arm myself using 9g servos to motorize the joins.</p>
       </div>
   </div>
   </div>
@@ -67,11 +67,11 @@
         </div>
         <div style="padding-left: 130px;">
           <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date</p>
-          <p style="color: black; font-size: 15px;">Oct 10, 2024</p>
+          <p style="color: black; font-size: 15px;">Dec 20, 2025</p>
         </div>
          <div style="padding-left: 130px;">
            <p style="color: #545454; font-size: 13px;margin-bottom: 0px;">Date Published</p>
-           <p style="color: black; font-size: 15px;">Nov 11, 2024</p>
+           <p style="color: black; font-size: 15px;">Jan 4, 2026</p>
          </div>
       </div>
 
@@ -81,42 +81,53 @@
         <div class="main-content">
           <div id="intro">
         <p style="margin-top: 30px;">
-        Over the summer of 2024, I got obsessed with FPV drone footage, dreaming of being able to pilot one of these one day. But with any drone pilot comes a drone. Upon researching the options I had for FPV, the results came back strikingly expensive. </p> <p> Watching more video led me down a rabbit hole of DIY FPV and extensive watch hours mentally prepared me for the large task of creating a fully functional drone. The video on a 7 inch FPV inspired me to source my parts due to its cheaper price.
- <a href="https://youtu.be/0jOUTYBneVo" style="margin-bottom: 20px;">https://youtu.be/0jOUTYBneVo</a>.
-        </p>
-          <iframe width="500" height="270"
-          src="https://www.youtube.com/embed/0jOUTYBneVo">
-          </iframe> </div>
+        I started to lift weights seriously in the first semester of 10th grade, and protein intake is a very important part of growing muscle. I wanted to make a robotic arm to automate the process of stirring the protein powder, since it take a long time to dissolved everything.
+  </div>
 
 
 
 
-          <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Materials</h1>
-            <ul>
-              <li><p>Video Transmitter (RUSH Solo Tank 5.8G)</p></li>
-              <li><p>4 BLDC Drone Motors (1300kv 2S-6S)</p></li>
-              <li><p>M3 Screws</p></li>
-              <li><p>3s Lipo Battery (11.1 V)</p></li>
-              <li><p>4 7X4X3 propellors</p></li>
-              <li><p>5.8G Antenna (Rush Cherry SMA-LHCP-160mm)</p></li>
-              <li><p>ELRS receiver</p></li>
-              <li><p>Camera (Runcam Phoenix 2 SE V2)</p></li>
-              <li><p>Mark 4 7 inch drone frame</p></li>
-              <li><p>F4 V3S Flight controller</p></li>
-              <li><p>45A ESC</p></li>
-              <li><p>Soldering Materials</p></li>
-            </ul>
-            <p>I sourced all of these parts on AliExpress, totaling around $200.</p>
+          <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">36 Tooth Gear</h1>
+            
+            <p>Starting off with the base of the Robotic Arm, the robotic arm must have a swivel. Since I will be using servos to control all movements of the arm, and the servos I have are limited to 180 degree spin, I need to make gears for a 2:1 ratio, so that the arm has full 360 degree spin.  
+            </p><p>
+
+
+            First I used CAD to make a 36 tooth gear, which is the gear that is going to attach directly to the servo. 
+            </p><p>
+            The first design of the gear did not account for the width of 3d printer nozzle diameter, and was only given 0.2 mm of space. The M2 screws had a very tight fit with the hole. </p>
+            <img src="armpic/old36t.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>The nuts that come with the m2 screws did not fit either. </p>
+            <p><b>Iteration two of the 36 tooth gear </b><br>After accounting for the 0.4mm 3d printer nozzle, the nut and screws fit much better. Attaching to the servo like this: </p>
+            <img src="armpic/servo36t.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <img src="armpic/servo36t2.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>Here is the CAD:</p>
+            <img src="armpic/36cad1.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <img src="armpic/36cad2.png" style=" border: 1px solid #ddd; border-radius: 4px;">
           </div>
 
 
 
 
-          <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Building It</h1>
-          <p>Building this was not very straightforward. The video by Hoarder Sam did not show the entire built process and a lot of the way the parts were put together I had to figure out myself. This was also my first time soldering, so I had to learn how to solder as well. 
+          <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Base of the Arm</h1>
+          <p>The arm swivels using a bearing to ensure smoothness. To attach the arm base to the bearing, I will use a screw to clamp it on as shown in the CAD:  
 </p>
-            <img src="dronesolder.png" style=" border: 1px solid #ddd; border-radius: 4px;">
-            <p class="subtitle">These were 6 pads on the ESC used to control the motors where I soldered them myself. Not the best soldering job, but it there's not shorting!</p> 
+            <img src="armpic/swivelcad1.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>
+              Here is the 3d printed real life model:
+            </p>
+            <img src="armpic/3dpswivel1.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>I use an 8-32 thread 1.33 in screw. </p>
+            <p>
+              In order to clamp the bearing onto a universal base, which I will be calling the housing because it will house the electronics, it will be something like this: 
+            </p>
+            <img src="armpic/swivelcad2.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>
+              I added the slight gap between those two pieces to account for 3d printer error, but apparently that was not needed and directly translated to the 3d printed piece. The gap is not problematic though. 
+            </p>
+            <img src="armpic/3dpswivel2.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>Bottom reference for housing holes:</p>
+            <img src="armpic/bottomref.png" style=" border: 1px solid #ddd; border-radius: 4px;">
           </div>
 
 
@@ -124,10 +135,16 @@
 
 
 
-          <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Configuration</h1>
-          <p>After completing building the drone and pairing the controller with the ELRS receiver, I had to use betaflight to configure some settings. Connecting the flightstack to the controller proved to be a challenge because it wouldn’t just directly connect. I had to configure a lot of settings to make sure they matched the hardware of the F4V3 flight stack as well as update the firmware. Here is what the motor configuratation looked like:</p>
-            <img src="betaflight.png" style=" border: 1px solid #ddd; border-radius: 4px;">
-            <p class="subtitle">(Source: Betaflight) Interface where I configured the directions of the motors to make sure the drone is able to fly properly and properllor direction is also correct.</p>
+          <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Housing</h1>
+          <p>The housing bottom holes for the arm base and swivel motor CAD: </p>
+            <img src="armpic/housingbase.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>Had to increase the spacing between the base holes and servo holes by .5 mm since the gears were meshing straight. 
+
+            </p><p>
+            The servo is held down by a brace: </p>
+            <img src="armpic/servobrace.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>The base originally was .3mm to short on the bottom, so a bit of the servo's bottom was sticking out, contributing to the gears not aligning. </p><p>The housing will also contain magnets to attach the other parts of the housing like the electronics housing and a top. </p><p>Although after printing I realized I failed to account for the top magnets. I decided that I will not print a new housing, and find a cheaper alternative. </p>
+            
           </div>
 
 
@@ -135,15 +152,45 @@
 
 
 
-           <div id = "outcome-2"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Testing and Results</h1>
-                    <p>Testing the drone went pretty well. The drone was very powerful and I had to make sure I didn’t crash it into anything. The done did fly, but since I don’t have FPV goggles yet, I wasn’t confident enough to control the drone as seen in the FPV videos. 
+           <div id = "outcome-2"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Axis 2</h1>
+                    <p>Four holes are places on the rotating disc, two for each arm holder. Each arm holder will also have a slot where a servo will go. I had to reprint this part since I needed to add a small extrusion where the head of the screw can go without interfering with the 36 tooth gear.  
           </p>
-             <video style="margin-top: 40px; " controls><source src="droneflight.mp4"></video>
-             <p class="subtitle">Wanted to be safe since this was indoors, but the drone works!</p>
-                    <p>2025 Update: My friend wanted to build a drone as well, so I referred this model to him and helped him build a near identical one. This drone build was pretty successful.
-          </p></div>
+             <img src="armpic/armswivelbase.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+           <p>Next, the arm holds were cadded and printed but the first time I printed them, the sockets for the m3 hex nut were too small.  </p><p>After fixing that here is the new holds:</p>
+            <img src="armpic/armhold.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+<p>After attaching the servos to either side, two arms were cadded, one for each servo:  </p>
+             <img src="armpic/2axisb.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+             <p>This is what I have so far. Since the arms move together, they can be conjoined using a connector: </p>
 
-          <a style="margin-top: 40px;" href = "flute">Next Article (PVC Flute) ></a>
+
+              <img src="armpic/2axisbs.jpeg" style=" border: 1px solid #ddd; border-radius: 4px;">
+             <p>Next, the second part of the arm need to be cadded, keeping in mind to create attachment points to the first part of the arm. </p>
+           </div>
+
+
+
+          <div id = "axis3"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Axis 3, 4, 5, 6</h1>
+                              <p>The second part contains a hold for another servo, so there are two pivot points.   
+                    </p>
+                       <img src="armpic/axis3servo.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+                     <p>Next, is the second part of the arm, which will be a pretty small piece since the rest of the second part of the arm will be much larger. This piece should also contain a servo slot for the 4th axis of a 6 axis arm. So, something like this:  </p>
+                      <img src="armpic/4thaxis.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+          <p>When assembled: </p>
+                       <img src="armpic/assembled4.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+                       <p>To attach the 4th axis, I'm just going to kind of mirror it. Here it is along with the 5th axis servo. </p>
+
+
+                        <img src="armpic/Axis5cad.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+                       <p>And finally, the last axis can be attached similar to the 4th axis. </p>
+            <img src="armpic/armfull.png" style=" border: 1px solid #ddd; border-radius: 4px;">
+            <p>With all 6 axis complete, the last few hardware things I need to do are attaching a multipurpose claw, tuning the angles of the servos, finish the housing, and add electronics. </p>
+                     </div>
+
+
+
+          
+
+          <a style="margin-top: 40px;" href = "raelectroncis">Next Article (Robotic Arm Electronics) ></a>
         </div>
       </div>
   </div>
@@ -160,10 +207,11 @@
       <div id="toc" style="position: absolute; top: 260px; font-size: 14px;">
         <p style="font-weight: bold; margin-bottom: 10px;">On this page</p>
         <li data-id = "intro"><a data-target = "intro" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Intro</a></li>
-        <li data-id = "materials"><a data-target = "materials" >Materials</a></li>
-        <li data-id = "building"><a data-target = "building" >Building It</a></li>
-        <li data-id = "postbuild"><a data-target = "postbuild" >Configuration</a></li>
-        <li data-id = "outcome-2"><a data-target = "outcome-2" >Testing and Results</a></li>
+        <li data-id = "materials"><a data-target = "materials" >36 Tooth Gear</a></li>
+        <li data-id = "building"><a data-target = "building" >Base of Arm</a></li>
+        <li data-id = "postbuild"><a data-target = "postbuild" >Housing</a></li>
+        <li data-id = "outcome-2"><a data-target = "outcome-2" >Axis 2</a></li>
+        <li data-id = "axis3"><a data-target = "axis3" >Axis-3</a></li>
       </div>
 
   </div>
