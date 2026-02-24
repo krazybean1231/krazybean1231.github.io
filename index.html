@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evan Yang</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="what.css" integrity="sha384-..." crossorigin="anonymous" />
 </head>
+
 <body>
 
   <div class="header" id="header">
     <div class="header-top">
       <a href="/" class="logo">Evan Yang</a>
       <button class="sandwich" id="sandwich" onclick="">&#9776;</button>
-        <div class="dropdown" id="dropdownMenu">
+      <div class="dropdown" id="dropdownMenu">
 
-          <a href="/" style="text-decoration: none;">Home</a>
-          <div class="dropdown-projects">
-            <a id="latest" style="text-decoration: none;">Blog</a>
-            <div class="dropdown-content">
+        <a href="/" style="text-decoration: none;">Home</a>
+        <div class="dropdown-projects">
+          <a id="latest" style="text-decoration: none;">Blog</a>
+          <div class="dropdown-content">
 
-            </div>
-            <script>
+          </div>
+          <script>
             fetch("/header.html")
               .then(res => res.text())
               .then(html => {
                 document.getElementById("dropdown-content").innerHTML = html;
               });
-            </script>
-          </div>
-          <a href="/contact" style="text-decoration: none;">Social</a>
+          </script>
         </div>
-    </div>
-      <div class="dropdown2" id="dropdownMenu2">
-
-        <a href="/" style="text-decoration: none;">Home</a>
-        <a id="latest" onclick="rn();" style="text-decoration: none;">Blog</a>
-        
         <a href="/contact" style="text-decoration: none;">Social</a>
       </div>
+    </div>
+    <div class="dropdown2" id="dropdownMenu2">
+
+      <a href="/" style="text-decoration: none;">Home</a>
+      <a id="latest" onclick="rn();" style="text-decoration: none;">Blog</a>
+
+      <a href="/contact" style="text-decoration: none;">Social</a>
+    </div>
 
   </div>
   <div style="height:100px;"></div>
@@ -48,24 +50,37 @@
     </div>
     <div class="content">
       <h1>Hi, I'm Evan Y</h1>
-      <p>Anyone can set goals, but only those guided by determination and consistent effort see them through. I believe meaningful progress is built through perseverance, discipline, and a willingness to learn from challenges. Guided by these values, I approach every responsibility with focus and accountability, achieving new levels of leadership and academic success every day. Outside of academics, I enjoy working on projects, spending time with friends, rock climbing, and exploring. </p>
+      <p>Anyone can set goals, but only those guided by determination and consistent effort see them through. I believe
+        meaningful progress is built through perseverance, discipline, and a willingness to learn from challenges.
+        Guided by these values, I approach every responsibility with focus and accountability, achieving new levels of
+        leadership and academic success every day. Outside of academics, I enjoy working on projects, spending time with
+        friends, rock climbing, and exploring. </p>
 
-  
+
     </div>
-    
+
   </div>
-<div style = "width: 100%; height: 50px;"></div>
+  <div style="width: 100%; height: 50px;"></div>
   <div class="container" style="font-size: 15px;">
-    <div class = "content-b">
-  <p style="font-size: 17px; margin-bottom: 0px;">You can find what I have been doing here: <a style="font-size: 17px;color:#007B77; cursor: pointer; margin-bottom: 0px;" onclick="rn();" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Blog</a></p>
+    <div class="content-b">
+      <p style="font-size: 17px; margin-bottom: 0px;">You can find what I have been doing here: <a
+          style="font-size: 17px;color:#007B77; cursor: pointer; margin-bottom: 0px;" onclick="rn();"
+          onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Blog</a></p>
       <p style="margin-bottom: 10px;font-size: 17px;">Or by year:</p>
-<li style="list-style-type: none; padding-left: 30px; margin-bottom: 10px;"><b>></b> <a href="2025" style="font-size: 17px;color:#007B77; cursor: pointer; " onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">2025</a></li>
-      <li style="list-style-type: none; padding-left: 30px; margin-bottom: 10px;"><b>></b> <a href="2024" style="font-size: 17px;color:#007B77; cursor: pointer; " onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">2024</a></li>
-      
+      <li style="list-style-type: none; padding-left: 30px; margin-bottom: 10px;"><b>></b> <a href="2026"
+          style="font-size: 17px;color:#007B77; cursor: pointer; " onmouseover="this.style.textDecoration='underline'"
+          onmouseout="this.style.textDecoration='none'">2026</a></li>
+      <li style="list-style-type: none; padding-left: 30px; margin-bottom: 10px;"><b>></b> <a href="2025"
+          style="font-size: 17px;color:#007B77; cursor: pointer; " onmouseover="this.style.textDecoration='underline'"
+          onmouseout="this.style.textDecoration='none'">2025</a></li>
+      <li style="list-style-type: none; padding-left: 30px; margin-bottom: 10px;"><b>></b> <a href="2024"
+          style="font-size: 17px;color:#007B77; cursor: pointer; " onmouseover="this.style.textDecoration='underline'"
+          onmouseout="this.style.textDecoration='none'">2024</a></li>
+
     </div>
 
 
-</div>
+  </div>
 
 
 
@@ -76,111 +91,116 @@
 
 
 
-<div style="height:400px;"></div>
-   <style>
+  <div style="height:400px;"></div>
+  <style>
     .header {
       transition: transform 0.25s ease-in-out;
-      z-index: 100; /* Ensure it stays on top */
+      z-index: 100;
+      /* Ensure it stays on top */
     }
 
     .header--hidden {
       transform: translateY(-100%);
     }
-     .main-content p{
-       margin-bottom: 10px;
-     }
-     .main-content a:hover{
-       color: #4a5f82;
-     }
+
+    .main-content p {
+      margin-bottom: 10px;
+    }
+
+    .main-content a:hover {
+      color: #4a5f82;
+    }
 
 
 
-     body {
-       font-family: system-ui, sans-serif;
-       margin: 0;
-       padding: 2rem;
-       background: #fff;
-       color: #222;
-     }
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #222;
+    }
 
-     .container {
-       display: flex;
-       max-width: 800px;
-       margin: 0 auto;
-       gap: 2rem;
-       flex-wrap: wrap;
-     }
+    .container {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
 
-     .profile-pic {
-       max-width: 200px;
-       height: auto;
-       border-radius: 32px;
-       overflow: hidden;
-       flex-shrink: 0;
-     }
+    .profile-pic {
+      max-width: 200px;
+      height: auto;
+      border-radius: 32px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
 
-     .profile-pic img {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-     }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-     .content {
-       flex: 1;
-       min-width: 280px;
-     }
+    .content {
+      flex: 1;
+      min-width: 280px;
+    }
 
-     h1 {
-       font-size: 2rem;
-       margin-bottom: 1rem;
-     }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-     p {
-       line-height: 1.6;
-       margin-bottom: 1rem;
-     }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
 
-     a {
-       color: #007b77;
-       text-decoration: none;
-     }
+    a {
+      color: #007b77;
+      text-decoration: none;
+    }
 
-     a:hover {
-       text-decoration: underline;
-     }
+    a:hover {
+      text-decoration: underline;
+    }
 
-     .socials {
-       margin-top: 1rem;
-       display: flex;
-       gap: 1rem;
-       flex-wrap: wrap;
-     }
+    .socials {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-     .socials a {
-       border: 1px solid #aaa;
-       padding: 0.4rem 0.75rem;
-       border-radius: 6px;
-       display: flex;
-       align-items: center;
-       font-size: 0.95rem;
-       color: #333;
-       text-decoration: none;
-       transition: 0.2s;
-     }
+    .socials a {
+      border: 1px solid #aaa;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #333;
+      text-decoration: none;
+      transition: 0.2s;
+    }
 
-     .socials a:hover {
-       background-color: #f0f0f0;
-     }
+    .socials a:hover {
+      background-color: #f0f0f0;
+    }
 
-     .socials i {
-       margin-right: 0.4rem;
-     }
-     @media (max-width: 615px){
-       .profile-pic{
-         margin: 0 auto;
-       }
-     }
+    .socials i {
+      margin-right: 0.4rem;
+    }
+
+    @media (max-width: 615px) {
+      .profile-pic {
+        margin: 0 auto;
+      }
+    }
   </style>
-   <script src="blog.js"></script>
+  <script src="blog.js"></script>
 </body>
+
 </html>

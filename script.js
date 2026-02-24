@@ -22,7 +22,7 @@ window.addEventListener('scroll', function() {
   if (scrollTop > lastScrollTop) {
     // Scrolling down
     headerr.classList.add('header--hidden');
-    if(opened == true){
+    if (opened == true) {
       menuIcon.classList.toggle("rotate");
       dropdown.classList.toggle("open");
       opened = !opened;
@@ -37,8 +37,8 @@ window.addEventListener('scroll', function() {
 
 
 
-window.onload = function () {
-  
+window.onload = function() {
+
 
   menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("rotate");
@@ -49,9 +49,9 @@ window.onload = function () {
 if (window.innerWidth > 600) {
   previous600screen = true;
   console.log("greater than 600")
- // menuIcon.classList.toggle("rotate");
- //dropdown.classList.toggle("open");
-}else{
+  // menuIcon.classList.toggle("rotate");
+  //dropdown.classList.toggle("open");
+} else {
   previous600screen = false;
 }
 const dateItems = document.querySelectorAll('.timeline-dates a');
@@ -78,7 +78,7 @@ dateItems.forEach(item => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 600) {
-    if(previous600screen == false && opened == true){
+    if (previous600screen == false && opened == true) {
       menuIcon.classList.toggle("rotate");
       dropdown.classList.toggle("open");
       console.log("Screen is wider than 600px");
@@ -87,7 +87,7 @@ window.addEventListener("resize", () => {
     previous600screen = true;
   } else {
     previous600screen = false;
-   // console.log("Screen is 600px or narrower");
+    // console.log("Screen is 600px or narrower");
   }
 });
 const posts = document.querySelectorAll('.post');
@@ -108,7 +108,7 @@ function updateHighlightAtOffset() {
       closestIndex = index;
     }
   });
-    
+
   dates.forEach((date, index) => {
     if (index === closestIndex) {
       date.style.color = '#3498db';
@@ -132,7 +132,7 @@ function updateHighlightAtOffset() {
 window.addEventListener('scroll', updateHighlightAtOffset);
 
 
-  
+
 
 const stickyStart = 200; // px from top where box starts
 const stickyStop = 100;  // px from top where it should stop
@@ -200,7 +200,7 @@ if (window.innerWidth < 300) {
 }
 
 
-let rightnow = "2025";
+let rightnow = "2026";
 
 const latestButton = document.getElementById("latest");
 
@@ -210,7 +210,7 @@ latestButton.addEventListener("click", () => {
 });
 latestButton.addEventListener("mouseover", () => {
   latestButton.style.cursor = "pointer";
-  
+
   latestButton.style.color = "#ddd";
 });
 
@@ -219,5 +219,5 @@ latestButton.addEventListener("mouseout", () => {
 });
 
 function rn() {
-   window.location.href = rightnow;
+  window.location.href = rightnow;
 }

@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
   if (scrollTop > lastScrollTop) {
     // Scrolling down
     headerr.classList.add('header--hidden');
-    if(opened == true){
+    if (opened == true) {
       menuIcon.classList.toggle("rotate");
       dropdown.classList.toggle("open");
       opened = !opened;
@@ -27,7 +27,7 @@ window.addEventListener('scroll', function() {
 
 
 
-window.onload = function () {
+window.onload = function() {
   menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("rotate");
     dropdown.classList.toggle("open");
@@ -37,9 +37,9 @@ window.onload = function () {
 if (window.innerWidth > 600) {
   previous600screen = true;
   console.log("greater than 600")
- // menuIcon.classList.toggle("rotate");
- //dropdown.classList.toggle("open");
-}else{
+  // menuIcon.classList.toggle("rotate");
+  //dropdown.classList.toggle("open");
+} else {
   previous600screen = false;
 }
 
@@ -48,7 +48,7 @@ if (window.innerWidth > 600) {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 600) {
-    if(previous600screen == false && opened == true){
+    if (previous600screen == false && opened == true) {
       menuIcon.classList.toggle("rotate");
       dropdown.classList.toggle("open");
       console.log("Screen is wider than 600px");
@@ -57,11 +57,11 @@ window.addEventListener("resize", () => {
     previous600screen = true;
   } else {
     previous600screen = false;
-   // console.log("Screen is 600px or narrower");
+    // console.log("Screen is 600px or narrower");
   }
 });
 
-let rightnow = "2025";
+let rightnow = "2026";
 
 let latestButton = document.getElementById("latest");
 
@@ -76,7 +76,7 @@ latestButton.addEventListener("mouseout", () => {
   latestButton.style.color = "";
 });
 function rn() {
-   window.location.href = rightnow;
+  window.location.href = rightnow;
 }
 
 const posts = document.querySelectorAll('.main-content div');
