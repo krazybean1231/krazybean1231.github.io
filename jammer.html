@@ -89,7 +89,7 @@
 
 
 
-          <div id = "materials"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Creating Circuit</h1>
+          <div id = "circuit"></v><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Creating Circuit</h1>
 
             <p>We started off making the PCBs. Our power source would be 4 aa batteries, making a total of 6v. Since the esp32 we were using cannot take 6v and the transceiver modules can only take up to 3.6v, we used an Lm1117t to regulate the voltage to 3.3v.
 </p>
@@ -102,7 +102,7 @@
 
 
 
-          <div id = "building"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Controlling Channels</h1>
+          <div id = "channel"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Controlling Channels</h1>
             <p>Since there are up to 125 channels on the 2.4 GHz bandwidth, there must be a way to control the channel the jammer is jamming. Since an 8 segment display with enough digits didn't fit on the PCB, we had to use another method of telling numbers. My friend came up with using binary with LEDs. We calculated that we need 7 LEDs to cover all 125 channels. 
             </p>
             <p>We also needed a way to control which channel and to do that, we decided to use a potentiometer. 
@@ -114,7 +114,7 @@
 
 
 
-          <div id = "postbuild"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Problems</h1>
+          <div id = "problem"><h1  style="margin-top: 30px; margin-bottom: 10px; font-size: 30px;">Problems</h1>
           <p>
             During soldering, ran into a few problems. First was making sure that the GPIO pins I used worked for the purpose. I had to plan accordingly to make sure the LEDs were using pins that were not read only and that the potentiometer should be on a read only pin. 
 
@@ -311,9 +311,10 @@
       <div id="toc" style="position: absolute; top: 260px; font-size: 14px;">
         <p style="font-weight: bold; margin-bottom: 10px;">On this page</p>
         <li data-id = "intro"><a data-target = "intro" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Intro</a></li>
-        <li data-id = "materials"><a data-target = "materials" >Materials</a></li>
-        <li data-id = "building"><a data-target = "building" >New Holes</a></li>
-        <li data-id = "postbuild"><a data-target = "postbuild" >Results</a></li>
+        <li data-id = "circuit"><a data-target = "circuit" >Creating Circuit</a></li>
+        <li data-id = "channel"><a data-target = "channel" >Controlling Channels</a></li>
+        <li data-id = "problem"><a data-target = "problem" >Problems</a></li>
+        <li data-id = "coding"><a data-target = "coding" >The Code</a></li>
       </div>
 
   </div>
